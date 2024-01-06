@@ -45,7 +45,7 @@ function Header() {
   
     const firstElement = jsonData && jsonData[0];
     const content = [
-      <div>{firstElement && <LocationSquare element={firstElement} />}</div>
+      <div class="mainContent">{firstElement && <LocationSquare element={firstElement} />}</div>
     ];
     return content;
   }
@@ -63,22 +63,27 @@ function Header() {
     return container;
   }
   function DropDown() {
-
+        const content = [
+            <div></div>
+        ]
+        return content
   }
-  function Card({ id, title, picture }) {
+
+  function Card({ id, title, picture, description }) {
     const content = [
-        <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-            <span>{id}</span>
-            <img src={picture} alt="freelance" height={80} width={80} />
+        <div key={id} class="card">
             <span>{title}</span>
+            <img src={picture} alt="je sais pas encore" height={80} width={80} />
+            <span>{description}</span>
         </div>
     ]
     return content
 }
 Card.propTypes = {
-    id: PropTypes.string, //nok
-    title: PropTypes.string, //ok
-    picture: PropTypes.arrayOf(PropTypes.string), //array
+    id: PropTypes.string,
+    title: PropTypes.string,
+    picture: PropTypes.arrayOf(PropTypes.string),
+    description: PropTypes.string
 }
   
   function Footer() {
