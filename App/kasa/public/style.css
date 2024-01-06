@@ -1,26 +1,80 @@
 body{
     max-width: 1440px;
-    max-height: none;
     margin: auto;
 }
-header {
-    margin-top: 45px;
-    margin-bottom: 50px;
-}
-header, ul{
+header{
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
-header ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+footer  {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 58px;
+    gap: 1em;
+    background-color: black;
 }
-li{
-    margin-inline: 1em;
+footer img, footer p {
+    margin: auto;
+
 }
 
-footer img{
-    fill: white;
+@media screen and (min-width: 1920px){
+    header {
+        margin-top: 45px;
+        margin-bottom: 50px;
+    }
+    a{
+        margin-inline: 1em;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    body{
+        max-width: 90%;
+    }
+    header {
+        margin-top: 20px;
+        margin-bottom: 27px;
+    }
+    nav{
+        display:flex;
+        justify-items: flex-start;
+        gap: 26px;
+    }
+    header img{
+        width:146px;
+        height:46px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .img {
+        animation: App-logo-spin infinite 20s linear;
+    }
+    .nav {
+        animation: Deploy infinite 5s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+         transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes Deploy {
+    from {
+        transform: rotate(1deg);
+        overflow: hidden;
+    }
+    to {
+        transform: rotate(200deg);
+        overflow: auto;
+    }
 }
