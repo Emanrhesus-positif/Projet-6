@@ -91,6 +91,7 @@ function Card({ id, title, picture, description }) {
     const content = [
         <div key={id} className="card">
             <span>{title}</span>
+            <a href="Logement"> </a>
         </div>
     ]
     return content
