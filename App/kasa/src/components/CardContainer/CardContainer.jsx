@@ -12,6 +12,7 @@ function CardContainer(jsonData) {
         description={element.description}
       />
     ));
+    console.log("passe ici")
   } else {
     console.error("Le contenu de jsonData n'est pas un tableau valide :", jsonData);
   }

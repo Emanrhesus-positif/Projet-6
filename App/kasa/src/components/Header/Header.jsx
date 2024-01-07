@@ -1,7 +1,9 @@
+import React from 'react';
+import imageSVG from '../../assets/LOGOHD.svg';
 function Header() {
     const content = (
       <header>
-        <img src="./assets/LOGOH.svg" alt="logo kasa" />
+        <img src={imageSVG} alt="logo kasa" />
         <nav>
           <a href="/">Accueil</a>
           <a href="Logement">A propos</a>
