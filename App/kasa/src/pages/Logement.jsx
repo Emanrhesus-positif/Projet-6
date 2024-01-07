@@ -1,4 +1,4 @@
-import {Header, Content, Footer} from '../App';
+import {Header, Footer} from '../App';
 function Logement () {
     const content = [
         <div>
