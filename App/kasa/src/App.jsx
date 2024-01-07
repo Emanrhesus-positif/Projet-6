@@ -11,70 +11,86 @@ function Header() {
       </header>
     );
     return content;
-  }
+}
   
-  function GetContent() {
-    const [jsonData, setJsonData] = useState(null);
+function GetContent() {
+	const [jsonData, setJsonData] = useState(null)
   
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const answer = await fetch('logements.json');
-          const data = await answer.json();
+          const answer = await fetch('logements.json')
+          const data = await answer.json()
           setJsonData(data);
-          console.log("je passe ici");
         } catch (error) {
-          console.error("json failure");
+          console.error("json failure")
         }
       };
-      fetchData();
+      fetchData()
     }, []);
   
-    return jsonData;
-  }
-  
-  function LocationSquare({element}) {
-    const content = [
-      <div key={element.id} id={element.id}>{element.title}</div>
-    
-    ];
-    return content;
-  }
-  function Content() {
-    const jsonData = GetContent();
-  
-    const firstElement = jsonData && jsonData[0];
-    const content = [
-      <div class="mainContent">{firstElement && <LocationSquare element={firstElement} />}</div>
-    ];
-    return content;
-  }
-  
-  function Carrousel() {
-    const content = [
-      <img src="./Assets/IMG1.png" alt="paysage"></img>,
-      <img src="./Assets/IMG2.png" alt="paysage"></img>
-    ];
-  
-    const container = [
-      <div className="carrousel">{content}</div>
-    ];
-  
-    return container;
-  }
-  function DropDown() {
-        const content = [
-            <div></div>
-        ]
-        return content
-  }
+    return jsonData
+}
 
-  function Card({ id, title, picture, description }) {
+function Content() {
+    const jsonData = GetContent()
+	const subContent = []
+
+	if(jsonData)
+	{
+		jsonData.forEach((element)=>{
+			subContent.push(
+				<Card key={element.id}
+					title={element.title}
+					picture={element.picture}
+					description={element.description}
+				/>
+			)
+		})
+	}
+
     const content = [
-        <div key={id} class="card">
+    	<div className="cardContainer">
+			{subContent}
+    	</div>
+    ];
+    return content
+}
+  
+function Carrousel() {
+    const images = [
+      { id: 1, src: "./Assets/IMG1.png", alt: "paysage1" },
+      { id: 2, src: "./Assets/IMG2.png", alt: "paysage2" }
+    ];
+  
+    const [currentImage, setCurrentImage] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      }, 10000);
+  
+      return () => clearInterval(interval);
+  
+    }, [images.length])
+    
+    const content = [
+      <div className="carrousel-container">
+        <div className="carrousel">
+            <div key={currentImage+1}className={`carousel-slide`}>
+              <img src={images[currentImage].src} alt={images[currentImage].alt} />
+              <p>Chez vous, Partout et ailleurs</p>
+            </div>
+        </div>
+      </div>
+    ]
+    return content
+}
+
+function Card({ id, title, picture, description }) {
+    const content = [
+        <div key={id} className="card">
             <span>{title}</span>
-            <img src={picture} alt="je sais pas encore" height={80} width={80} />
-            <span>{description}</span>
         </div>
     ]
     return content
@@ -86,14 +102,14 @@ Card.propTypes = {
     description: PropTypes.string
 }
   
-  function Footer() {
+function Footer() {
     const content = (
       <footer>
         <img src="./assets/LOGOF.svg" alt="logo kasa" />
         <p>© 2020 Kasa. All rights reserved</p>
       </footer>
     );
-    return content;
-  }
+    return content
+}
 
-  export {Header, Content, Footer};
+export {Header, Content, Footer, Card, Carrousel};

@@ -1,9 +1,10 @@
 
-import {Header, Content, Footer} from '../App';
+import {Header, Content, Footer, Carrousel, Card} from '../App';
 function Home(){
     const content = [
         <div>
            <Header />
+           <Carrousel />
            <Content />
            <Footer />
          </div>

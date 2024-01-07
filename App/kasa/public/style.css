@@ -1,5 +1,7 @@
+/* TOUT REFAIRE EN REM AVEC FIGMA */
 html{
     height:100%;
+    color: #FFFF;
 }
 body{
     display:flex;
@@ -7,14 +9,19 @@ body{
     max-width: 1440px;
     min-height:100vh;
     margin: auto;
+    align-items: center;
 }
 header{
     display:flex;
     justify-content:space-between;
     align-items: center;
+    max-width: 1240px;
+    max-height: 68px;
 }
 footer  {
     display:flex;
+    box-sizing: border-box;
+    margin-top: 50px;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 56px;
@@ -28,6 +35,60 @@ footer img, footer p {
 }
 .mainContent {
     flex: 1;
+}
+.carousel-slide {
+    margin:auto;
+    overflow: hidden;
+    max-width: 1240px;
+    max-height: 223px;
+    border-radius: 25px;
+}
+.carousel-slide img{
+
+    transform: translate(0%, -45%);
+}
+.carousel-slide p{
+    position:absolute;
+    margin: 0;
+    top:35%;
+    left:25%;
+
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.800);
+}
+.cardContainer{
+    display:flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    margin-top: 43px;
+    padding-top: 56px;
+    padding-bottom: 43px;
+    padding-inline: 50px;
+
+    box-sizing: border-box;
+    max-width: 1240px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #F6F6F6;
+
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 50px;
+
+}
+
+.card{
+    box-sizing: border-box;
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    
+    background: linear-gradient(to bottom, #FFFFFF00, #000000);
+    background-color: #FF6060;
 }
 
 @media screen and (min-width: 1920px){
@@ -60,20 +121,26 @@ footer img, footer p {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .img {
-        animation: App-logo-spin infinite 20s linear;
+    .carousel-slide {
+        animation: Change-image 10s linear;
     }
     .nav {
         animation: Deploy infinite 5s linear;
     }
 }
 
-@keyframes App-logo-spin {
-    from {
-         transform: rotate(0deg);
+@keyframes Change-image {
+    0%{
+        transform: translateX(0);
     }
-    to {
-        transform: rotate(360deg);
+    90%{
+        transform: translateX(0);
+    }
+    95%{
+        transform: translateX(-5%);
+    }
+    100%{
+        transform: translateX(200%);
     }
 }
 @keyframes Deploy {
