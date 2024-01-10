@@ -1,3 +1,4 @@
+import "./Footer.css";
 function Footer() {
     const content = (
       <footer>

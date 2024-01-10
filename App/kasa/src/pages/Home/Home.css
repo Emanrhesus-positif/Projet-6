@@ -1,0 +1,15 @@
+html{
+    height:100%;
+    color: #FFFF;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    max-width: 1440px;
+    min-height:100vh;
+    margin: auto;
+    align-items: center;
+}
+#root{
+    width: 100%;
+}

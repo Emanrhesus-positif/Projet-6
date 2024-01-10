@@ -1,0 +1,15 @@
+footer  {
+    display:flex;
+    box-sizing: border-box;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 58px;
+    gap: 1em;
+    background-color: black;
+    margin-top: auto;
+}
+footer img, footer p {
+    margin: auto;
+}

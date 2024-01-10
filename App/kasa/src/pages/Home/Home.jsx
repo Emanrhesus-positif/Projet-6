@@ -1,10 +1,11 @@
 
 import React from 'react';
-import Header from '../components/Header/Header.jsx';
-import Carrousel from '../components/Carrousel/Carrousel.jsx';
-import CardContainer from '../components/CardContainer/CardContainer.jsx';
-import Footer from '../components/Footer/Footer.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Banner from '../../components/Banner/Banner.jsx';
+import CardContainer from '../../components/CardContainer/CardContainer.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 import { useEffect, useState } from 'react';
+import "./Home.css";
 
 function GetJSON() {
 	const [jsonData, setJsonData] = useState(null)
@@ -28,7 +29,7 @@ function Home() {
     return (
         <div>
             <Header />
-            <Carrousel />
+            <Banner />
             <CardContainer jsonData={GetJSON()} />
             <Footer />
         </div>

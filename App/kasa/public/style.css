@@ -11,14 +11,14 @@ body{
     margin: auto;
     align-items: center;
 }
-header{
+/* header{
     display:flex;
     justify-content:space-between;
     align-items: center;
     max-width: 1240px;
     max-height: 68px;
-}
-footer  {
+} */
+/* footer  {
     display:flex;
     box-sizing: border-box;
     margin-top: 50px;
@@ -32,11 +32,11 @@ footer  {
 }
 footer img, footer p {
     margin: auto;
-}
+} */
 .mainContent {
     flex: 1;
 }
-.carousel-slide {
+/* .carousel-slide {
     margin:auto;
     overflow: hidden;
     max-width: 1240px;
@@ -59,8 +59,8 @@ footer img, footer p {
     font-style: normal;
     font-weight: 500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.800);
-}
-.cardContainer{
+} */
+/* .cardContainer{
     display:flex;
     flex-wrap: wrap;
     margin-inline: auto;
@@ -79,9 +79,9 @@ footer img, footer p {
     row-gap: 60px;
     column-gap: 50px;
 
-}
+} */
 
-.card{
+/* .card{
     display:flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -102,9 +102,9 @@ footer img, footer p {
     position: absolute;
     object-fit: cover;
     
-}
+} */
 
-@media screen and (min-width: 1920px){
+/* @media screen and (min-width: 1920px){
     header {
         margin-top: 45px;
         margin-bottom: 50px;
@@ -112,13 +112,13 @@ footer img, footer p {
     a{
         margin-inline: 1em;
     }
-}
+} */
 
 @media screen and (max-width: 800px){
     body{
         max-width: 90%;
     }
-    header {
+    /* header {
         margin-top: 20px;
         margin-bottom: 27px;
     }
@@ -130,10 +130,10 @@ footer img, footer p {
     header img{
         width:146px;
         height:46px;
-    }
+    } */
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
     .carousel-slide {
         animation: Change-image 10s linear;
     }
@@ -165,4 +165,4 @@ footer img, footer p {
         transform: rotate(200deg);
         overflow: auto;
     }
-}
+} */

@@ -1,0 +1,22 @@
+.card{
+    display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    
+    background: linear-gradient(to bottom, #FFFFFF00, #000000);
+    background-color: #FF6060;
+    justify-content: flex-end;
+}
+.card span{
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+.card a{
+    position: absolute;
+    object-fit: cover;
+    
+}

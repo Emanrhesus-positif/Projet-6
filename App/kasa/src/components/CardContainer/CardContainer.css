@@ -1,0 +1,20 @@
+.cardContainer{
+    display:flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    margin-top: 43px;
+    padding-top: 56px;
+    padding-bottom: 43px;
+    padding-inline: 50px;
+
+    box-sizing: border-box;
+    max-width: 1240px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #F6F6F6;
+
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 50px;
+
+}

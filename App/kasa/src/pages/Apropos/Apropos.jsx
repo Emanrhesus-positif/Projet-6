@@ -1,10 +1,10 @@
 
-import {Header, Footer, Carrousel, Content} from '../App';
+import {Header, Footer, Banner, Content} from '../../App';
 function Apropos(){
     const content = [
         <div>
            <Header />
-           <Carrousel />
+           <Banner />
            <Content />
            <Footer />
          </div>
