@@ -11,7 +11,7 @@ function CardContainer({ jsonData }) {
           <Card
             key={element.id}
             title={element.title}
-            picture={element.cover}
+            cover={element.cover}
             description={element.description}
           />
         );

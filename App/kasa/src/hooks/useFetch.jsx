@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function GetJSON() {
+function useFetch() {
   const [jsonData, setJsonData] = useState(null);
 
   useEffect(() => {
@@ -20,4 +20,4 @@ function GetJSON() {
   return jsonData;
 }
 
-export default GetJSON;
+export default useFetch;

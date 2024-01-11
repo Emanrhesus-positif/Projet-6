@@ -1,14 +1,14 @@
-.carousel-slide {
+.carrousel-slide {
     margin:auto;
     overflow: hidden;
     max-width: 1240px;
     max-height: 223px;
     border-radius: 25px;
 }
-.carousel-slide img{
+.carrousel-slide img{
     transform: translate(0%, -45%);
 }
-.carousel-slide p{
+.carrousel-slide p{
     position:absolute;
     margin: 0;
     top:35%;
@@ -23,7 +23,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .carousel-slide {
+    .carrousel-slide {
         animation: Change-image 10s linear;
     }
 }

@@ -1,37 +1,41 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import "./Carrousel.css";
-import img1 from '../../assets/IMG1.png';
-import img2 from '../../assets/IMG2.png';
+ function Carrousel({ jsonData }) {
+  const subContent = [];
+  const [currentImg, setCurrentImg] = useState(null);
+  
+  if (jsonData) {
+    if (Array.isArray(jsonData)) {
+      jsonData.forEach((element) => {
+        subContent.push(
+          <img key={element.id} src={element.cover} alt={element.description} visibility="hidden"></img>
+        );
+        setCurrentImg(element.id);
+      });
+      console.log(jsonData);
+    } else {
+      console.error("Erreur : jsonData n'est pas un tableau valide", jsonData);
+    }
+  } else {
+    console.error("Pas de données JSON :", jsonData);
+  }
 
- function Carrousel() {
-    const images = [
-      { id: 1, src:img1, alt: "paysage1" },
-      { id: 2, src:img2, alt: "paysage2" },
-      { id: 3, src:img2, alt: "paysage3" }
-    ];
-  
-    const [currentImage, setCurrentImage] = useState(0);
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-      }, 10000);
-  
-      return () => clearInterval(interval);
-  
-    }, [images.length])
+Carrousel.propTypes = {
+  id: PropTypes.string,
+  cover: PropTypes.string,
+  description: PropTypes.string
+}
     
     const content = [
       <div key="carrousel-container" className="carrousel-container">
         <div key="carrousel" className="carrousel">
-            <div key={currentImage+1}className={`carousel-slide`}>
-              <img src={images[currentImage].src} alt={images[currentImage].alt} />
-              <p>Chez vous, Partout et ailleurs</p>
+            <div key="Carrousel-slide"className={`carrousel-slide`}>
+              {subContent}
             </div>
         </div>
       </div>
-    ]
-    return content
+    ];
+    return content;
 }
-
 export default Carrousel;

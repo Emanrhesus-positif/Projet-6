@@ -3,18 +3,18 @@ import Header from '../../components/Header/Header.jsx';
 import Banner from '../../components/Banner/Banner.jsx';
 import CardContainer from '../../components/CardContainer/CardContainer.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
-import GetJSON from '../../components/GetJSON/GetJSON.jsx';
+import GetJSON from '../../hooks/useFetch.jsx';
 
 function Home() {
   const jsonData = GetJSON();
 
   return (
-    <div>
+    <main>
       <Header />
       <Banner />
       <CardContainer jsonData={jsonData} />
       <Footer />
-    </div>
+    </main>
   );
 }
 

@@ -1,7 +1,6 @@
 footer  {
     display:flex;
     box-sizing: border-box;
-    margin-top: 50px;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 56px;

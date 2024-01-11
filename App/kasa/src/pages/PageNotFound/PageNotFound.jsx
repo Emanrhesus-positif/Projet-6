@@ -2,11 +2,11 @@
 import {Header, Footer} from '../../App';
 function PageNotFound(){
     const content = [
-        <div>
+        <main>
            <Header />
            <p>404 Oups! La page que vous demandez n'existe pas.</p>
            <Footer />
-         </div>
+         </main>
     ]
     return content
 }
