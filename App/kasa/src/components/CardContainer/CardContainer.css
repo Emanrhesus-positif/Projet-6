@@ -1,20 +1,23 @@
 .cardContainer{
     display:flex;
     flex-wrap: wrap;
+    flex-shrink: 0;
+
     margin-inline: auto;
-    margin-top: 43px;
-    padding-top: 56px;
-    padding-bottom: 43px;
-    padding-inline: 50px;
+    padding-top: 3.5rem;
+    padding-bottom: 2.69rem;
 
     box-sizing: border-box;
-    max-width: 1240px;
-    flex-shrink: 0;
-    border-radius: 25px;
+    max-width: 77.5rem;
+ 
+    border-radius: 1.5625rem;
     background: #F6F6F6;
 
     justify-content: center;
-    row-gap: 60px;
-    column-gap: 50px;
+    row-gap: 3.12rem;
+    column-gap: 3.75rem;
+ 
+    padding-inline-start: 3.12rem;
+    padding-inline-end: 3.12rem;
 
 }

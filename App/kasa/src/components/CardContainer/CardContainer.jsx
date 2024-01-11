@@ -9,7 +9,7 @@ function CardContainer({ jsonData }) {
       jsonData.forEach((element) => {
         subContent.push(
           <Card
-            key={element.id}
+            id={element.id}
             title={element.title}
             cover={element.cover}
             description={element.description}

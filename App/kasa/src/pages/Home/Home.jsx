@@ -4,6 +4,7 @@ import Banner from '../../components/Banner/Banner.jsx';
 import CardContainer from '../../components/CardContainer/CardContainer.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import GetJSON from '../../hooks/useFetch.jsx';
+import './Home.css';
 
 function Home() {
   const jsonData = GetJSON();

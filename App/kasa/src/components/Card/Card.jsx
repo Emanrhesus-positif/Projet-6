@@ -4,12 +4,14 @@ import {Link} from "react-router-dom";
 import './Card.css';
 function Card({ id, title, cover, description }) {
     const content = [
-        <Link to={`/logement/${id}`}>
             <div key={id} className="card">
-                <span>{title}</span>
-                <img key={id} src={cover} alt={description}></img>
+                <Link to={`/logement/${id}`}>
+                    <span>{title}</span>
+                    <img key={id} src={cover} alt={description}></img>
+                </Link>
             </div>
-        </Link>
+        
+        
     ]
     return content
 }
