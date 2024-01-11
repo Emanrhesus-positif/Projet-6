@@ -1,29 +1,35 @@
 import React from 'react';
 import Card from '../Card/Card.jsx';
 import './CardContainer.css';
-function CardContainer(jsonData) {
-  const subContent=[];
-	
+function CardContainer({ jsonData }) {
+  const subContent = [];
+
   if (jsonData) {
-    const keys = Object.keys(jsonData);
-    
-    if(keys.length > 0){
-      keys.map((key) => (subContent.push(<Card key={key.id} title={key.title} picture={key.cover} description={key.description}/>)));
+    if (Array.isArray(jsonData)) {
+      jsonData.forEach((element) => {
+        subContent.push(
+          <Card
+            key={element.id}
+            title={element.title}
+            picture={element.cover}
+            description={element.description}
+          />
+        );
+      });
       console.log(jsonData);
-      console.log(subContent);
-    }
-    else{
-      console.log("erreur",jsonData );
-      console.log(jsonData.length);
+    } else {
+      console.error("Erreur : jsonData n'est pas un tableau valide", jsonData);
     }
   } else {
-    console.error("pas de JSON:", jsonData);
+    console.error("Pas de données JSON :", jsonData);
   }
-    const content = [
-    	<div key="cardContainer" className="cardContainer">
-			  {subContent}
-    	</div>
-    ];
-    return content
+
+  const content = (
+    <div key="cardContainer" className="cardContainer">
+      {subContent}
+    </div>
+  );
+  return content;
 }
-export default CardContainer
+
+export default CardContainer;
