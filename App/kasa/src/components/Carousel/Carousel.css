@@ -7,16 +7,18 @@
     height:25.9375rem;
     flex-shrink:0;
     border-radius: 1.5625rem;
-    justify-content: center;
 }
 .carousel-item{
+    margin: auto;
     min-width:100%;
     width:100%;
     display:flex;
-    align-items: center;
-    justify-content: center;
     transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
     box-sizing: border-box;
+}
+.carousel-item span{
+    position:absolute;
+    color: black;
 }
 
 @media (prefers-reduced-motion: no-preference) {

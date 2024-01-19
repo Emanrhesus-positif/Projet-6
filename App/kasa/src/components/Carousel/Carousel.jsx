@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import "./Carousel.css";
 
@@ -6,7 +6,9 @@ function Carousel({ data }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	const carouselInfiniteScroll = () => {
-		if (currentIndex === data.pictures.length-1) {
+		const maxTemp = data.map(element => element.pictures.length);
+		console.log(maxTemp);
+		if (currentIndex === maxTemp-1) {
 			return setCurrentIndex(0);
 		}
 		return setCurrentIndex(currentIndex + 1)

@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Logement from './pages/Logement/Logement';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import Apropos from './pages/Apropos/Apropos';
 
 export const Router = () => {
   return (<BrowserRouter>
@@ -10,6 +11,7 @@ export const Router = () => {
       <Route path="/" element={<Home />} />
       <Route path="/logement/:id" element={<Logement />} />
       <Route path="/Page-Not-Found" element={<PageNotFound />}/>
+      <Route path="/A-propos" element={<Apropos />}/>
     </Routes>
   </BrowserRouter>)
 }

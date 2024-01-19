@@ -1,10 +1,7 @@
 import './Banner.css';
 
-import "./Banner.css";
-import img1 from '../../assets/IMG1.png';
-
- function Banner() {
-    const image = { id: 1, src:img1, alt: "paysage1" }
+ function Banner({img1}) {
+    const image = { id: 1, src:{img1}, alt: "paysage" }
     
     const content = [
     	<div key={image.id} className={`banner`}>

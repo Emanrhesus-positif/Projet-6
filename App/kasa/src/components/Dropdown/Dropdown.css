@@ -1,0 +1,19 @@
+.dropdown-container{
+    position: absolute;
+    margin:auto;
+    width: 20rem;
+    padding: 0.625rem 1.25rem 0.625rem 0.9375rem;
+    border-radius: 0.625rem;
+}
+.dropdown-options{
+    color: #FF6060;
+    background: #F6F6F6;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%; /* 1.60425rem */
+}
+.dropdown-title{
+    background: var(--Red, #FF6060);
+}

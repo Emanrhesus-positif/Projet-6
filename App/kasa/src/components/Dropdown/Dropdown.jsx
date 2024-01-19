@@ -1,21 +1,21 @@
-import React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
+import './Dropdown.css';
 
-function DropDown() {
-    const [open, setOpen] = React.useState(false);
+function DropDown({title, options}) {
+    const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
       setOpen(!open);
     };
-
     return (
-      <div>
-        <button onClick={handleOpen}>Element</button>
-        {open ? (   
-            // <div className={data.id}></div>
-            <div className="temporaire">
-                <p>test</p>
-                <p>test2</p>
+      <div className="dropdown-container">
+        <div className="dropdown-title">
+          <button onClick={handleOpen}>{title}</button>
+        </div>
+        {open ? (
+            <div className="dropdown-options">
+                {options.map(element => (<p>{element}</p>))}
             </div>
         ): null }
       </div>

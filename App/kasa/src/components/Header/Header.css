@@ -2,9 +2,26 @@ header{
     display: flex;
     width: 77.5rem;
     height: 4.25rem;
-    justify-content: center;
-    align-items: center;
-    gap: 45.04238rem;
+    justify-content: space-between;
+    /* gap: 45.04238rem; */
+}
+header nav{
+    display: flex;
+    align-items: flex-end;
+    gap: 3.5625rem;
+}
+header a{
+    margin:0;
+    color: #FF6060;
+    width: 8.5rem;
+
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%; /* 2.139rem */
+    text-decoration-line: underline;
 }
 
 @media screen and (min-width: 1920px){

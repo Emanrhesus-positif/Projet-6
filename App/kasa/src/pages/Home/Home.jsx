@@ -4,6 +4,7 @@ import Banner from '../../components/Banner/Banner.jsx';
 import CardContainer from '../../components/CardContainer/CardContainer.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import useFetch from '../../hooks/useFetch.jsx';
+import img1 from '../../assets/IMG1.png';
 import './Home.css';
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
       return (
         <main>
           <Header />
-          <Banner />
+          <Banner img1={img1}/>
           <CardContainer jsonData={jsonData} />
           <Footer />
         </main>

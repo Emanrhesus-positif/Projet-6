@@ -7,7 +7,7 @@ function Header() {
         <img src={imageSVG} alt="logo kasa" />
         <nav>
           <a href="/">Accueil</a>
-          <a href="Logement">A propos</a>
+          <a href="A-propos">A propos</a>
         </nav>
       </header>
     );
