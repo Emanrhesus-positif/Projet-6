@@ -4,12 +4,13 @@ body{
 }
 #App{
     max-width: 1440px;
+    align-items: center;
 }
 
 main{
     display:flex;
     flex-direction: column;
-    max-width: 1440px;
+    width:100%;
     margin:auto;
     align-items: center; 
 

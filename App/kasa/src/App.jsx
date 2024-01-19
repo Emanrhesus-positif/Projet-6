@@ -1,5 +1,7 @@
-import Routage from './Routage.jsx';
+import {Router} from './Router.jsx';
+
 function App() {
-  Routage();
+  return <Router />;
 }
-export default App
+
+export default App;

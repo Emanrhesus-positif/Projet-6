@@ -1,10 +1,12 @@
 
-import {Header, Footer} from '../../App';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import ErrorHandler from '../../components/ErrorHandler/ErrorHandler';
 function PageNotFound(){
     const content = [
         <main>
            <Header />
-           <p>404 Oups! La page que vous demandez n'existe pas.</p>
+           <ErrorHandler />
            <Footer />
          </main>
     ]

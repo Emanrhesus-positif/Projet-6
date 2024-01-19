@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 function useFetch() {
-  const [jsonData, setJsonData] = useState(null);
+  const [jsonData, setJsonData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('logements.json');
+        const response = await fetch('/data/logements.json');
         const data = await response.json();
         setJsonData(data);
       } catch (error) {
@@ -15,6 +15,7 @@ function useFetch() {
     };
 
     fetchData();
+
   }, []);
 
   return jsonData;

@@ -9,6 +9,8 @@ footer  {
     gap: 1.78475rem;
     background: #000;
     color: #FFFFFF;
+    box-sizing: border-box;
+
 }
 footer img, footer p {
     margin: auto;

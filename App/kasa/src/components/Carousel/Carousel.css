@@ -1,0 +1,41 @@
+.carousel-container{
+    background: #f1f1f1;
+    display:flex;
+    flex-wrap:nowrap;
+    overflow:hidden;
+    width:77.5rem;
+    height:25.9375rem;
+    flex-shrink:0;
+    border-radius: 1.5625rem;
+    justify-content: center;
+}
+.carousel-item{
+    min-width:100%;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .carousel-anim{
+        animation: Change-image 1s linear;
+    }
+}
+
+@keyframes Change-image {
+    0%{
+        transform: translate(100%);
+    }
+    33%{
+        transform: translateX(200%);
+    }
+    66%{
+        transform: translateX(300%);
+    }
+    100%{
+        transform: translateX(400%);
+    }
+}

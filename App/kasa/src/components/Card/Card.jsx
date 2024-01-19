@@ -10,8 +10,6 @@ function Card({ id, title, cover, description }) {
                     <img key={id} src={cover} alt={description}></img>
                 </Link>
             </div>
-        
-        
     ]
     return content
 }
