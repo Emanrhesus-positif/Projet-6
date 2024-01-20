@@ -15,7 +15,11 @@ function DropDown({title, options}) {
         </div>
         {open ? (
             <div className="dropdown-options">
-                {options.map(element => (<p>{element}</p>))}
+                {Array.isArray(options)?
+                  options.map(element => (<p>{element}</p>))
+                : <p>{options}</p>
+                }
+                
             </div>
         ): null }
       </div>

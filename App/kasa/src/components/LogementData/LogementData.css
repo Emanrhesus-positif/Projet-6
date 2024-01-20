@@ -1,3 +1,45 @@
 .logement-info {
     box-sizing: border-box;
 }
+.logement-content, .logement-situation, .logement-rater, .logement-extended-info, .logement-tag-container {
+    display: flex;
+    margin: auto;
+}
+.logement-content {
+    flex-direction: row;
+}
+.logement-situation{
+ flex-direction:column;
+ margin-left: 0;
+}
+.logement-rater {
+    flex-direction:column;
+    margin-right: 0;
+}
+.logement-extended-info {
+    flex-direction: row;
+    margin-top: 0;
+}
+.logement-extended-info .dropdown-container{
+    margin-top: 0;
+}
+.logement-tag-container{
+    flex-direction: row;
+    margin-left: 0;
+    gap: 1rem;
+}
+@media screen and (min-width: 1920px){
+    
+}
+
+@media screen and (max-width: 800px){
+    .logement-content{
+        flex-direction:column;
+    }
+    .logement-rater{
+        flex-direction: row-reverse;
+    }
+    .logement-extended-info {
+        flex-direction: column;
+    }
+}

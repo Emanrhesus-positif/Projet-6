@@ -7,7 +7,6 @@ function Carousel({ data }) {
 
 	const carouselInfiniteScroll = () => {
 		const maxTemp = data.map(element => element.pictures.length);
-		console.log(maxTemp);
 		if (currentIndex === maxTemp-1) {
 			return setCurrentIndex(0);
 		}
@@ -19,7 +18,7 @@ function Carousel({ data }) {
 	})
 	return (
 		<div className='carousel-container'>
-			{data? 
+			{data?
 				Array.isArray(data)? 
 					data.map(element => (
 						element.pictures.map((image, index) => (

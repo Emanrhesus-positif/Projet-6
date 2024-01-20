@@ -1,7 +1,7 @@
 import './Banner.css';
 
- function Banner({img1}) {
-    const image = { id: 1, src:{img1}, alt: "paysage" }
+export const Banner = ({picture}) => {
+    const image = { id: 1, src:picture, alt: "paysage" }
     
     const content = [
     	<div key={image.id} className={`banner`}>
@@ -11,5 +11,3 @@ import './Banner.css';
     ]
     return content
 }
-
-export default Banner;
