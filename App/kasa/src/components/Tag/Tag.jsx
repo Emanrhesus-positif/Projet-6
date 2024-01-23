@@ -2,5 +2,5 @@ import './Tag.css'
 
 export const Tag = ({element}) => {
 
-    return(<p>{element}</p>)
+    return(<p className="tag-element">{element}</p>)
 }

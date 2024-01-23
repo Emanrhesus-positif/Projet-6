@@ -1,0 +1,18 @@
+.tag-element {
+    width: 7.1875rem;
+    height: 1.5625rem;
+    flex-shrink: 0;
+
+    border-radius: 0.625rem;
+    background: #FF6060;
+
+    color: #FFF;
+
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%; /* 1.24775rem */
+
+    text-align:center;
+}

@@ -6,29 +6,30 @@ import {Tag} from '../Tag/Tag.jsx';
 import {Rating} from '../Rating/Rating.jsx';
 
 function LogementData ({data}){
-    return data.map((element) => (
-        console.log(element.equipments),
-        <div key={element.id} className="logement-info">
-            <Carousel data={data}/>
+    console.log(data);
+    return (
+        console.log(data.equipments),
+        <div key={data.id} className="logement-info">
+            <Carousel data={data.pictures}/>
             <div className="logement-content">
                 <div className="logement-situation">
-                    <h1>{element.title}</h1>
-                    <p>{element.location}</p>
+                    <h1>{data.title}</h1>
+                    <p>{data.location}</p>
                     <div className="logement-tag-container">
-                        {element.tags.map((tag) => (<Tag element={tag} />))}
-                    </div> 
+                        {data.tags.map((tag) => (<Tag element={tag} />))}
+                    </div>
                 </div>
                 <div className="logement-rater">
-                    <Profile name={element.host.name} picture={element.host.picture}/>
-                    <Rating note={element.rating} />
+                    <Profile name={data.host.name} picture={data.host.picture}/>
+                    <Rating note={data.rating} />
                 </div>
             </div>
             <div className="logement-extended-info">
-                    <DropDown title="description" options={element.description} />
-                    <DropDown title="equipements" options={element.equipments} />
+                    <DropDown title="description" options={data.description} />
+                    <DropDown title="equipements" options={data.equipments} />
                 </div>
         </div>
-    ))
+    )
 }
 
 

@@ -4,33 +4,64 @@ import "./Carousel.css";
 
 function Carousel({ data }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
-
+	const maxTemp = data.length;
 	const carouselInfiniteScroll = () => {
-		const maxTemp = data.map(element => element.pictures.length);
+		const maxTemp = data.length;
 		if (currentIndex === maxTemp-1) {
 			return setCurrentIndex(0);
 		}
 		return setCurrentIndex(currentIndex + 1)
 	}
+	const toNext = () => {
+		if (currentIndex === maxTemp-1) {
+			return setCurrentIndex(0);
+		}
+		return setCurrentIndex(currentIndex + 1)
+	}
+	const toPrev = () => {
+		if (currentIndex === 0) {
+			return setCurrentIndex(maxTemp - 1);
+		}
+		return setCurrentIndex(currentIndex - 1)
+	}
 	useEffect(() => {
 		const interval = setInterval(() => { carouselInfiniteScroll() }, 3000)
-		return () => clearInterval(interval)
+		return clearInterval(interval)
 	})
+
 	return (
+		// <div className="carousel-control">
+		// 	<button onClick={toPrev}>previous</button>
+		// 	<div className='carousel-container'>
+		// 	{data?
+		// 		Array.isArray(data)? 
+		// 			data.map(element => (
+		// 				element.pictures.map((image, index) => (
+		// 					<div key={index} className='carousel-item' style={{transform: `translate(-${currentIndex * 100}%)`}}>
+		// 						<img src={image} alt={element.title}></img>
+		// 						<span>{index+1}/{element.pictures.length-1}</span>
+		// 					</div>
+		// 				))
+		// 			))
+		// 		: <p>Les données ne sont pas au format tableau</p>
+		// 	: <p>Aucune donnée fournie</p>}
+		// 	</div>
+		// 	<button onClick={toNext}>next</button>
+		// </div>
+		<div className="carousel-control">
+		<button onClick={toPrev}>previous</button>
 		<div className='carousel-container'>
-			{data?
-				Array.isArray(data)? 
-					data.map(element => (
-						element.pictures.map((image, index) => (
-							<div key={index} className='carousel-item' style={{transform: `translate(-${currentIndex * 100}%)`}}>
-								<img src={image} alt={element.title}></img>
-								<span>{index+1}/{element.pictures.length-1}</span>
-							</div>
-						))
-					))
-				: <p>Les données ne sont pas au format tableau</p>
-			: <p>Aucune donnée fournie</p>}
+				{data.map((image, index) => (
+						<div key={index} className='carousel-item' style={{transform: `translate(-${currentIndex * 100}%)`}}>
+							<img src={image} alt=""></img>
+							<span>{index+1}/{data.length-1}</span>
+						</div>
+					))}
 		</div>
+		<button onClick={toNext}>next</button>
+	</div>
+		
+		
 	);
 }
 Carousel.propTypes = {
@@ -39,3 +70,4 @@ Carousel.propTypes = {
 };
 
 export default Carousel;
+
