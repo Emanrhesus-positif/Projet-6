@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Header.css"
 import imageSVG from '../../assets/LOGOHD.svg';
+
 function Header() {
     const content = (
       <header>
