@@ -1,14 +1,15 @@
 import classes from './Header.module.scss'
 import React from 'react';
 import imageSVG from '../../assets/LOGOHD.svg';
+import {Link} from "react-router-dom";
 
 export const Header = () => {
 	const content = (
 		<header>
 		  <img src={imageSVG} alt="logo kasa" />
 		  <nav>
-			<a href="/">Accueil</a>
-			<a href="/A-propos">A propos</a>
+			<Link to={`/`}>Accueil</Link>
+			<Link to={`/a-propos/`}>A propos</Link>
 		  </nav>
 		</header>
 	  );

@@ -1,13 +1,12 @@
 .container{
     box-sizing: border-box;
     width: 77.5rem;
+    flex-direction: column;
+    gap:1.5rem;
 }
 .container, .informations, .situation, .evaluator, .addons, .tags{
     display: flex;
     margin: auto;
-}
-.container{
-    flex-direction: column;
 }
 .informations {
     flex-direction: row;
@@ -32,6 +31,11 @@
         font-weight: 500;
         line-height: 142.6%; /* 1.60425rem */
     }
+    .tags{
+        flex-direction: row;
+        margin:0;
+        gap: 1rem;
+    }
 }
 .evaluator {
     flex-direction:column;
@@ -42,12 +46,9 @@
     margin-top: 0;
     width:100%;
     align-items: flex-start;
+    gap:4.75rem;
 }
-.tags{
-    flex-direction: row;
-    margin-left: 0;
-    gap: 1rem;
-}
+
 @media screen and (min-width: 1920px){}
     
 

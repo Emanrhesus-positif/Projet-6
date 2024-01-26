@@ -3,8 +3,11 @@
     img{
         box-sizing: border-box;
         border-radius: 50%;
+        width:4rem;
+        height:4rem;
     }
     span{
+        justify-self: center;
         color: #FF6060;
         text-align: right;
         font-family: Montserrat;

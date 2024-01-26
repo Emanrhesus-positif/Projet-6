@@ -22,8 +22,8 @@ import {Rating} from '../Rating/Rating.jsx';
 					</div>
 				</div>
 				<div className={classes.addons}>
-					<DropDown title="description" options={data.description} />
-					<DropDown title="equipements" options={data.equipments} />
+					<DropDown title="Description" options={data.description} />
+					<DropDown title="Équipements" options={data.equipments} />
 				</div>
 			</div>
 		)
