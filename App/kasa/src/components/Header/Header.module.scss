@@ -23,9 +23,8 @@ header a{
     line-height: 142.6%; /* 2.139rem */
     text-decoration-line: underline;
 }
-
 @media screen and (min-width: 1920px){
-    header {
+    header{
         margin-top: 45px;
         margin-bottom: 50px;
     }
@@ -35,7 +34,7 @@ header a{
 }
 
 @media screen and (max-width: 800px){
-    header {
+    header{
         margin-top: 20px;
         margin-bottom: 27px;
     }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import "./Carousel.css";
+import classes from "./Carousel.module.scss";
 
-function Carousel({ data }) {
+export const Carousel = ({ data }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const maxTemp = data.length;
 	const carouselInfiniteScroll = () => {
@@ -30,44 +30,21 @@ function Carousel({ data }) {
 	})
 
 	return (
-		// <div className="carousel-control">
-		// 	<button onClick={toPrev}>previous</button>
-		// 	<div className='carousel-container'>
-		// 	{data?
-		// 		Array.isArray(data)? 
-		// 			data.map(element => (
-		// 				element.pictures.map((image, index) => (
-		// 					<div key={index} className='carousel-item' style={{transform: `translate(-${currentIndex * 100}%)`}}>
-		// 						<img src={image} alt={element.title}></img>
-		// 						<span>{index+1}/{element.pictures.length-1}</span>
-		// 					</div>
-		// 				))
-		// 			))
-		// 		: <p>Les données ne sont pas au format tableau</p>
-		// 	: <p>Aucune donnée fournie</p>}
-		// 	</div>
-		// 	<button onClick={toNext}>next</button>
-		// </div>
 		<div className="carousel-control">
 		<button onClick={toPrev}>previous</button>
-		<div className='carousel-container'>
+		<img src="../../assets/ARROWLEFT.svg" alt="previous"></img>
+		<div className={classes.container}>
 				{data.map((image, index) => (
-						<div key={index} className='carousel-item' style={{transform: `translate(-${currentIndex * 100}%)`}}>
+						<div key={index} className={classes.item} style={{transform: `translate(-${currentIndex * 100}%)`}}>
 							<img src={image} alt=""></img>
 							<span>{index+1}/{data.length-1}</span>
 						</div>
 					))}
 		</div>
 		<button onClick={toNext}>next</button>
-	</div>
-		
-		
-	);
+	</div>);
 }
 Carousel.propTypes = {
-	id: PropTypes.string,
+	index: PropTypes.string,
 	pictures: PropTypes.arrayOf(PropTypes.string)
-};
-
-export default Carousel;
-
+}

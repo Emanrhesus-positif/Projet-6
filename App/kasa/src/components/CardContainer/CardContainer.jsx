@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from '../Card/Card.jsx';
-import './CardContainer.css';
-function CardContainer({ jsonData }) {
+import { Card } from '../Card/Card.jsx';
+import classes from './CardContainer.module.scss';
+export const CardContainer = ({jsonData}) => {
   const subContent = [];
 
   if (jsonData) {
@@ -25,11 +25,9 @@ function CardContainer({ jsonData }) {
   }
 
   const content = (
-    <div key="cardContainer" className="cardContainer">
+    <div className={classes.container}>
       {subContent}
     </div>
   );
   return content;
 }
-
-export default CardContainer;

@@ -1,7 +1,5 @@
-import {Router} from './Router.jsx';
+import { Router } from './Router.jsx';
 
-function App() {
-  return <Router />;
+export const App = () => {
+	return <Router />;
 }
-
-export default App;

@@ -1,0 +1,41 @@
+.card{
+    position:relative;
+    box-sizing: border-box;
+    width: 21.25rem;
+    height: 21.25rem;
+    
+    border-radius: 0.625rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+    background-color: #FF6060;
+    justify-content: flex-end;
+
+    overflow: hidden;
+    
+    span{
+        position: absolute;
+        z-index: 2;
+        bottom: 1.25rem;
+        left: 1.25rem;
+    
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6% /* 1.60425rem */;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.800);
+        width: 18.75rem;
+    }
+    img {
+        z-index: 1;
+        position:absolute;
+        object-fit:cover;
+        height:100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    a{
+        margin:0;
+    }
+}

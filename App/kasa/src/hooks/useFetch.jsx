@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-function useFetch() {
-  const [jsonData, setJsonData] = useState([]);
+export const useFetch = () => {
+	const [jsonData, setJsonData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,5 +20,3 @@ function useFetch() {
 
   return jsonData;
 }
-
-export default useFetch;

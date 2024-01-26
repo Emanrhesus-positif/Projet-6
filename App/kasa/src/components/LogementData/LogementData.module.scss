@@ -1,0 +1,65 @@
+.container{
+    box-sizing: border-box;
+    width: 77.5rem;
+}
+.container, .informations, .situation, .evaluator, .addons, .tags{
+    display: flex;
+    margin: auto;
+}
+.container{
+    flex-direction: column;
+}
+.informations {
+    flex-direction: row;
+    width:100%
+}
+.situation{
+    flex-direction:column;
+    margin-left: 0;
+    h1 {
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 3.2085rem */
+    }
+    p {
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 1.60425rem */
+    }
+}
+.evaluator {
+    flex-direction:column;
+    margin-right: 0;
+}
+.addons {
+    flex-direction: row;
+    margin-top: 0;
+    width:100%;
+    align-items: flex-start;
+}
+.tags{
+    flex-direction: row;
+    margin-left: 0;
+    gap: 1rem;
+}
+@media screen and (min-width: 1920px){}
+    
+
+
+@media screen and (max-width: 800px){
+    .logement-content{
+        flex-direction:column;
+    }
+    .logement-rater{
+        flex-direction: row-reverse;
+    }
+    .logement-extended-info{
+        flex-direction: column;
+    }
+}

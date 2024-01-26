@@ -1,0 +1,29 @@
+.banner {
+    position:relative;
+    margin:auto;
+    overflow: hidden;
+    max-width: 77.5rem;
+    max-height: 13.9375rem;
+    flex-shrink: 0;
+    border-radius: 1.5625rem;
+    /* opacity: 0.3; */
+    background: #000;
+    img{
+        transform: translate(0%, -45%);
+    }
+    p{
+        position:absolute;
+        margin: 0;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.800);
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 4.278rem */
+    }
+}

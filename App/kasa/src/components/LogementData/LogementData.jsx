@@ -1,36 +1,30 @@
-import './LogementData.css';
-import DropDown from '../Dropdown/Dropdown.jsx';
-import Carousel from '../Carousel/Carousel.jsx';
-import {Profile} from '../Profile/Profile.jsx';
+import classes from './LogementData.module.scss';
+import { DropDown } from '../DropDown/DropDown.jsx';
+import { Profile } from '../Profile/Profile.jsx';
 import {Tag} from '../Tag/Tag.jsx';
 import {Rating} from '../Rating/Rating.jsx';
 
-function LogementData ({data}){
-    console.log(data);
-    return (
-        console.log(data.equipments),
-        <div key={data.id} className="logement-info">
-            <Carousel data={data.pictures}/>
-            <div className="logement-content">
-                <div className="logement-situation">
-                    <h1>{data.title}</h1>
-                    <p>{data.location}</p>
-                    <div className="logement-tag-container">
-                        {data.tags.map((tag) => (<Tag element={tag} />))}
-                    </div>
-                </div>
-                <div className="logement-rater">
-                    <Profile name={data.host.name} picture={data.host.picture}/>
-                    <Rating note={data.rating} />
-                </div>
-            </div>
-            <div className="logement-extended-info">
-                    <DropDown title="description" options={data.description} />
-                    <DropDown title="equipements" options={data.equipments} />
-                </div>
-        </div>
-    )
-}
+	export const LogementData = ({ data }) => {
+		return (
+			<div className={classes.container}>
+				<div className={classes.informations}>
+					<div className={classes.situation}>
+						<h1>{data.title}</h1>
+						<p>{data.location}</p>
+						<div className={classes.tags}>
+							{data.tags.map((tag) => (<Tag element={tag} />))}
+						</div>
+					</div>
 
-
-export default LogementData;
+					<div className={classes.evaluator}>
+						<Profile name={data.host.name} picture={data.host.picture}/>
+						<Rating note={data.rating} />
+					</div>
+				</div>
+				<div className={classes.addons}>
+					<DropDown title="description" options={data.description} />
+					<DropDown title="equipements" options={data.equipments} />
+				</div>
+			</div>
+		)
+	}

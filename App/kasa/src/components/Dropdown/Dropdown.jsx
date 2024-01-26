@@ -1,25 +1,24 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Dropdown.css';
+import classes from './DropDown.module.scss';
 
-function DropDown({title, options}) {
-    const [open, setOpen] = useState(false);
+export const DropDown = ({ title, options }) => {
+	const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
       setOpen(!open);
     };
     return (
-      <div className="dropdown-container">
-        <div className="dropdown-title">
+      <div className={classes.container}>
+        <div className={classes.title}>
           <button onClick={handleOpen}>{title}</button>
         </div>
         {open ? (
-            <div className="dropdown-options">
+            <div className={classes.options}>
                 {Array.isArray(options)?
                   options.map(element => (<p>{element}</p>))
                 : <p>{options}</p>
                 }
-                
             </div>
         ): null }
       </div>
@@ -27,7 +26,5 @@ function DropDown({title, options}) {
 }
 
 DropDown.propTypes = {
-    id: PropTypes.string,
+    title: PropTypes.string
 }
-
-export default DropDown;
