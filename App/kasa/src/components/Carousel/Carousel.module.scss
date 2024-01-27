@@ -1,13 +1,40 @@
-.container{
-    background: #f1f1f1;
-    display:flex;
-    flex-wrap:nowrap;
-    overflow:hidden;
+.control{
+    box-sizing: border-box;
     width:77.5rem;
     height:25.9375rem;
-    flex-shrink:0;
-    border-radius: 1.5625rem;
+    position: relative;
+    button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        height: 100%;
+
+        &.prev {
+            left: 0;
+            z-index: 1;
+        }
+
+        &.next {
+            right: 0;
+        }
+        
+    }
+    .container{
+        position: relative;
+        box-sizing: border-box;
+        background: #f1f1f1;
+        display:flex;
+        flex-wrap:nowrap;
+        overflow:hidden;
+        width:77.5rem;
+        height:25.9375rem;
+        flex-shrink:0;
+        border-radius: 1.5625rem;
+    }
 }
+
 .item{
     margin: auto;
     min-width:100%;
