@@ -1,12 +1,17 @@
 .container {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     align-self: center;
+    margin-top: 2.5rem;
+    gap: 2.38rem;
 }
 .DDcontainer{
     display: flex;
     flex-direction: column;
-    margin: 2.38rem auto;
+    margin: auto;
     align-self: center;
     gap: 1.875rem;
-    width: 63.9375rem;
+    max-width: 63.9375rem;
+    width:100%;
 }

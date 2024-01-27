@@ -1,8 +1,9 @@
 .control{
     box-sizing: border-box;
-    width:77.5rem;
-    height:25.9375rem;
     position: relative;
+    max-width:77.5rem;
+    max-height:25.9375rem;
+    
     button{
         position: absolute;
         top: 50%;
@@ -28,33 +29,26 @@
         display:flex;
         flex-wrap:nowrap;
         overflow:hidden;
-        width:77.5rem;
-        height:25.9375rem;
+        max-width:77.5rem;
+        max-height:25.9375rem;
         flex-shrink:0;
         border-radius: 1.5625rem;
-    }
-}
 
-.item{
-    margin: auto;
-    min-width:100%;
-    width:100%;
-    display:flex;
-    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-    box-sizing: border-box;
-    span{
-        position:absolute;
-        color: black;
-    }
-}
-
-@media (prefers-reduced-motion: no-preference){
-    .carousel-anim{
-        animation: Change-image 1s linear;
-    }
-}    
-
-
-@keyframes Change-image{
+        .item{
+            margin: auto;
+            min-width:100%;
+            width:100%;
+            display:flex;
+            transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+            box-sizing: border-box;
+            img{
+                position:relative;
+                min-width: 100%;
+                min-height: 200%;
+                top:-25%;
+            }
+        }
         
+    }
 }
+

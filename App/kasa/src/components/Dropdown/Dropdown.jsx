@@ -29,5 +29,5 @@ export const DropDown = ({ title, options }) => {
 
 DropDown.propTypes = {
     title: PropTypes.string,
-    oprions: Array.isArray(PropTypes.string)
+    options: Array.isArray(PropTypes.string)
 }

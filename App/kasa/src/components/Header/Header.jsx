@@ -1,17 +1,20 @@
-import classes from './Header.module.scss'
+import classes from './Header.module.scss';
 import React from 'react';
 import imageSVG from '../../assets/LOGOHD.svg';
-import {Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-	const content = (
+	console.log(isActive('/'));
+	return (
 		<header>
 		  <img src={imageSVG} alt="logo kasa" />
 		  <nav>
-			<Link to={`/`}>Accueil</Link>
-			<Link to={`/a-propos/`}>A propos</Link>
+			<NavLink to={`/`} 
+				ClassName={({ isActive, isPending }) =>
+				isPending ? "pending" : isActive ? "active" : ""
+			  }>Accueil</NavLink>
+			<NavLink to={`/a-propos/`} ClassName={classes.active}>A propos</NavLink>
 		  </nav>
 		</header>
 	  );
-	  return content;
 }

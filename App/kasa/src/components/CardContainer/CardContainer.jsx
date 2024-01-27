@@ -24,10 +24,9 @@ export const CardContainer = ({jsonData}) => {
     console.error("Pas de données JSON :", jsonData);
   }
 
-  const content = (
-    <div className={classes.container}>
+  return (
+    <div key={0} className={classes.container}>
       {subContent}
     </div>
   );
-  return content;
 }
