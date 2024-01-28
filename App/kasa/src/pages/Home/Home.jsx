@@ -15,7 +15,7 @@ export const Home = () => {
 			return (
 				<main className={classes.container}>
 					<Header />
-					<Banner picture={img1} />
+					<Banner picture={img1} text={"Chez vous, partout et ailleurs"} />
 					<CardContainer jsonData={jsonData} />
 					<Footer />
 				</main>

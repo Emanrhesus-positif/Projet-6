@@ -12,6 +12,7 @@
     background: #000;
     img{
         transform: translate(0%, -45%);
+        width:100%;
     }
     p{
         position:absolute;
@@ -28,4 +29,25 @@
         font-weight: 500;
         line-height: 142.6%; /* 4.278rem */
     }
+}
+
+
+@media screen and (min-width: 1920px){
+    
+}
+
+@media screen and (max-width: 800px){
+    .banner{
+        max-width: 90%;
+        max-height: 6.9375rem;
+        p{
+            font-size: 1.5rem;
+            line-height: 100%;
+        }
+        img{
+            width: 100%;
+            transform: translate(0%, -45%);
+        }
+    }
+    
 }

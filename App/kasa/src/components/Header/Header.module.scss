@@ -24,17 +24,16 @@ header{
             font-style: normal;
             font-weight: 500;
             line-height: 142.6%; /* 2.139rem */
+            text-decoration-line: none;
+        }
+        .active{
             text-decoration-line: underline;
-    
-            a.active{
-                text-decoration-line: none;
-                color: white;
-                font-weight: bold;
-            }
         }
     }
     
+    
 }
+
 
 @media screen and (min-width: 1920px){
     
@@ -42,16 +41,20 @@ header{
 
 @media screen and (max-width: 800px){
     header{
-        margin-top: 20px;
-        margin-bottom: 27px;
+        nav{
+            gap: 1.625rem;
+    
+            a {
+                width:auto;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        img{
+            width: 9.0625rem;
+            height: 2.93006rem;
+    
+        }
     }
-    nav{
-        display:flex;
-        justify-items: flex-start;
-        gap: 26px;
-    }
-    header img{
-        width:146px;
-        height:46px;
-    }
+    
 }

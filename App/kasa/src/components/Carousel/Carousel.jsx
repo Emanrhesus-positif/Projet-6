@@ -6,23 +6,23 @@ import right from '../../assets/ARROWRIGHT.svg';
 
 export const Carousel = ({ data }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const maxTemp = data.length;
+	const maxPictures = data.length;
 	const toNext = () => {
-		if (currentIndex === maxTemp-1) {
+		if (currentIndex === maxPictures-1) {
 			return setCurrentIndex(0);
 		}
 		return setCurrentIndex(currentIndex + 1)
 	}
 	const toPrev = () => {
 		if (currentIndex === 0) {
-			return setCurrentIndex(maxTemp - 1);
+			return setCurrentIndex(maxPictures - 1);
 		}
 		return setCurrentIndex(currentIndex - 1)
 	}
 
 	return (
 		<div className={classes.control}>
-			<button onClick={toPrev} className={classes.prev}><img src={left} alt="previous"></img></button>
+			{maxPictures === 1 ? <></> : <button onClick={toPrev} className={classes.prev}><img src={left} alt="previous"></img></button>}
 			<div className={classes.container}>
 				{data.map((image, index) => (
 						<div key={index} className={classes.item} style={{transform: `translate(-${currentIndex * 100}%)`}}>
@@ -31,7 +31,7 @@ export const Carousel = ({ data }) => {
 						</div>
 					))}
 			</div>
-			<button onClick={toNext} className={classes.next}><img src={right} alt="next"></img></button>
+			{maxPictures === 1 ? <></> :<button onClick={toNext} className={classes.next}><img src={right} alt="next"></img></button>}
 		</div>);
 }
 Carousel.propTypes = {

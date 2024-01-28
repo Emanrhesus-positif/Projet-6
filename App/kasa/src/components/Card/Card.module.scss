@@ -39,3 +39,19 @@
         margin:0;
     }
 }
+
+@media screen and (min-width: 1920px){
+    
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        max-width: 20.9375rem;
+        max-height: 15.9375rem;
+        p{
+            font-size: 1.125rem;
+            line-height: 142.6%; /* 1.60425rem */
+        }
+    }
+    
+}
