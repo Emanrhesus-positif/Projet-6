@@ -25,13 +25,13 @@ export const Carousel = ({ data }) => {
 			{maxPictures === 1 ? <></> : <button onClick={toPrev} className={classes.prev}><img src={left} alt="previous"></img></button>}
 			<div className={classes.container}>
 				{data.map((image, index) => (
-						<div key={index} className={classes.item} style={{transform: `translate(-${currentIndex * 100}%)`}}>
+						<div key={index} className={`${classes.item} ${index === currentIndex ? classes.currentItem : ''}`}>
 							<img src={image} alt=""></img>
-							<span>{index+1}/{data.length-1}</span>
+							<span>{index+1}/{data.length}</span>
 						</div>
 					))}
 			</div>
-			{maxPictures === 1 ? <></> :<button onClick={toNext} className={classes.next}><img src={right} alt="next"></img></button>}
+			{maxPictures === 1 ? <></> : <button onClick={toNext} className={classes.next}><img src={right} alt="next"></img></button>}
 		</div>);
 }
 Carousel.propTypes = {

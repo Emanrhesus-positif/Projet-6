@@ -4,14 +4,14 @@
     overflow: hidden;
     max-width: 77.5rem;
     max-height: 13.9375rem;
-    width:100%;
+    width:90%;
     height:100%;
     flex-shrink: 0;
     border-radius: 1.5625rem;
     /* opacity: 0.3; */
     background: #000;
     img{
-        transform: translate(0%, -45%);
+        transform: translate(0%, -35%);
         width:100%;
     }
     p{
@@ -39,15 +39,14 @@
 
 @media screen and (max-width: 800px){
     .banner{
-        max-width: 90%;
         max-height: 6.9375rem;
         p{
             font-size: 1.5rem;
             line-height: 100%;
         }
         img{
-            width: 100%;
-            transform: translate(0%, -45%);
+            width: 150%;
+            transform: translate(-25%, -35%);
         }
     }
     

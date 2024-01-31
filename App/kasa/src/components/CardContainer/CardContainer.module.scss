@@ -9,6 +9,7 @@
 
     box-sizing: border-box;
     max-width: 77.5rem;
+    width:90%;
  
     border-radius: 1.5625rem;
     background: #F6F6F6;
@@ -19,4 +20,19 @@
  
     padding-inline-start: 3.12rem;
     padding-inline-end: 3.12rem;
+}
+
+@media screen and (min-width: 1920px){
+    
+}
+
+@media screen and (max-width: 800px){
+    .container{
+        background:none;
+        padding: 0;
+        margin: auto;
+        margin-top: 0;
+        row-gap: 1.25rem;
+    }
+    
 }

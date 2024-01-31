@@ -1,6 +1,7 @@
 .container{
     box-sizing: border-box;
-    width: 77.5rem;
+    max-width: 77.5rem;
+    width: 90%;
     flex-direction: column;
     gap:1.5rem;
 }
@@ -54,13 +55,15 @@
 
 
 @media screen and (max-width: 800px){
-    .logement-content{
+    .container, .informations{
         flex-direction:column;
     }
-    .logement-rater{
+    .evaluator{
         flex-direction: row-reverse;
+        margin:0;
+        justify-content: center;
     }
-    .logement-extended-info{
+    .addons{
         flex-direction: column;
     }
 }

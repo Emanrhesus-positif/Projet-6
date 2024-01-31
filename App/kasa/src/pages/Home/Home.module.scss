@@ -1,17 +1,16 @@
-body {
-    max-width: 1440px;
-    margin: auto;
-    width:90%;
+body{
+    margin: 0px;
 }
+
 #App {
     max-width: 1440px;
     align-items: center;
+    width: 100%;
 }
 main{
     display:flex;
     flex-direction: column;
-    width:100%;
-    margin:auto;
+    width: 100%;
     align-items: center;
     display: inline-flex;
     padding-top: 2.8125rem;
