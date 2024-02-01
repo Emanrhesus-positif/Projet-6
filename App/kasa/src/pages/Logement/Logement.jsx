@@ -25,13 +25,22 @@ export const Logement = () => {
 
 	return (
 		<main>
-			<Header />
+			<div className={classes.headerWrap}>
+				<Header />
+			</div>
 			{house && (
 				<>
+				<div className={classes.carouselWrap}>
 					<Carousel data={house.pictures} />
+				</div>
+				<div className={classes.logementWrap}>
 					<LogementData data={house}/>
+				</div>
 				</>
 			)}
-			<Footer />
+			<div className={classes.footerWrap}>
+				<Footer />
+			</div>
+			
 		</main>);
 }

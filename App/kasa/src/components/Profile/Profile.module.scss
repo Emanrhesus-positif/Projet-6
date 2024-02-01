@@ -1,5 +1,9 @@
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.62rem;
     img{
         box-sizing: border-box;
         border-radius: 50%;
@@ -15,5 +19,23 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.6%; /* 1.60425rem */
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        gap: 0.66rem;
+        img{
+            width: 2rem;
+            height: 2rem;
+        }
+        span{
+            display: flex;
+            width: 5.8125rem;
+            height: 2.0625rem;
+            font-size: 0.75rem;
+            justify-self: center;
+            align-items: center;
+        }
     }
 }

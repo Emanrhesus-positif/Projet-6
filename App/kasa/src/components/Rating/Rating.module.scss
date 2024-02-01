@@ -1,4 +1,10 @@
 .container{ 
     display: flex;
-    justify-content: flex-end;
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        width: 6.125rem;
+        height: 1.125rem;
+    }
 }

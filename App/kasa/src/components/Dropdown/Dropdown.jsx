@@ -18,7 +18,7 @@ export const DropDown = ({ title, options }) => {
         {open ? (
             <div className={classes.options}>
                 {Array.isArray(options)?
-                  options.map(element => (<p>{element}</p>))
+                  options.map(element => (<p key={element}>{element}</p>))
                 : <p>{options}</p>
                 }
             </div>
@@ -29,5 +29,5 @@ export const DropDown = ({ title, options }) => {
 
 DropDown.propTypes = {
     title: PropTypes.string,
-    options: Array.isArray(PropTypes.string)
+    element: PropTypes.string
 }

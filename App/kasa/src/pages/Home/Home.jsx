@@ -9,15 +9,14 @@ import img1 from '../../assets/IMG1.png';
 
 export const Home = () => {
 	const jsonData = useFetch();
-	console.log(jsonData);
 	if (jsonData){
 		if(Array.isArray(jsonData)){
 			return (
 				<main className={classes.container}>
-					<Header />
-					<Banner picture={img1} text={"Chez vous, partout et ailleurs"} />
-					<CardContainer jsonData={jsonData} />
-					<Footer />
+					<div className={classes.headerWrap}><Header /></div>
+					<div className={classes.bannerWrap}><Banner picture={img1} text={"Chez vous, partout et ailleurs"} /></div>
+					<div className={classes.cardcontainerWrap}><CardContainer jsonData={jsonData} /></div>
+					<div className={classes.footerWrap}><Footer /></div>
 				</main>
 			);
 		}

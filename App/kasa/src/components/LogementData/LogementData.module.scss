@@ -3,7 +3,6 @@
     max-width: 77.5rem;
     width: 90%;
     flex-direction: column;
-    gap:1.5rem;
 }
 .container, .informations, .situation, .evaluator, .addons, .tags{
     display: flex;
@@ -16,6 +15,7 @@
 .situation{
     flex-direction:column;
     margin-left: 0;
+    margin-top: 1.87rem;
     h1 {
         color: #FF6060;
         font-family: Montserrat;
@@ -23,6 +23,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.6%; /* 3.2085rem */
+        margin:0;
     }
     p {
         color: #FF6060;
@@ -31,20 +32,26 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.6%; /* 1.60425rem */
+        margin: 0;
     }
     .tags{
         flex-direction: row;
+        flex-shrink: 1;
         margin:0;
+        margin-top: 1.25rem;
         gap: 1rem;
     }
 }
 .evaluator {
     flex-direction:column;
     margin-right: 0;
+    .ratingWrap{
+        margin-top: 1.31rem;
+    }
 }
 .addons {
     flex-direction: row;
-    margin-top: 0;
+    margin-top: 1.5rem;
     width:100%;
     align-items: flex-start;
     gap:4.75rem;
@@ -58,12 +65,37 @@
     .container, .informations{
         flex-direction:column;
     }
+    .situation{
+        margin-top:0.94rem;
+        h1 {
+            width: 20.9375rem;
+            height: 2.875rem;
+            font-size: 1.125rem;
+        }
+        p {
+            font-size: 0.875rem;
+        }
+        .tags{
+            margin-top: 0.62rem;;
+        }
+    }
     .evaluator{
         flex-direction: row-reverse;
         margin:0;
+        margin-top: 1.03rem;
+        align-items: center;
         justify-content: center;
+
+        .ratingWrap {
+            margin-right: auto; 
+            justify-content: flex-start; 
+        }
+        
     }
     .addons{
         flex-direction: column;
+        margin-top: 0.81rem;
+        gap:1.25rem;
     }
+
 }

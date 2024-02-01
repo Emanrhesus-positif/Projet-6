@@ -1,7 +1,7 @@
 import classes from './Rating.module.scss';
 import fullStar from '../../assets/STARCOMPLETE.svg';
 import emptyStar from '../../assets/STAREMPTY.svg';
-
+import PropTypes from 'prop-types';
 export const Rating = ({note}) => {
 	const ratingBar = [
 		emptyStar,
@@ -13,11 +13,14 @@ export const Rating = ({note}) => {
 	for( let i = 0; i <= note-1; i++ ){
 		ratingBar[i] = fullStar;
 	}
-	ratingBar.map(element => console.log(element));
 
 	return(
 		<div className={classes.container}>
-			{ratingBar.map((element) => <img src={element}></img>)}
+			{ratingBar.map((element, index) => <img key={index} src={element}></img>)}
 		</div>
 	);  
+}
+
+Rating.propTypes = {
+	element: PropTypes.string
 }

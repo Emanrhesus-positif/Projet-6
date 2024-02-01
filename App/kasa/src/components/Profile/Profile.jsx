@@ -1,5 +1,5 @@
 import classes from './Profile.module.scss';
-
+import PropTypes from 'prop-types';
 export const Profile = ({name, picture}) => {
     return(
         <div className={classes.container}>
@@ -7,4 +7,8 @@ export const Profile = ({name, picture}) => {
             <img src={picture} alt='profil'></img>
         </div>
     );
+}
+Profile.propTypes = {
+    name: PropTypes.string,
+    picture: PropTypes.string
 }

@@ -1,4 +1,6 @@
 .container{
+    display: flex;
+
     width: 7.1875rem;
     height: 1.5625rem;
     flex-shrink: 0;
@@ -15,4 +17,14 @@
     line-height: 142.6%; /* 1.24775rem */
 
     text-align:center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        font-size: 0.625rem;
+        width: 5.25rem;
+        height: 1.125rem;
+    }
 }

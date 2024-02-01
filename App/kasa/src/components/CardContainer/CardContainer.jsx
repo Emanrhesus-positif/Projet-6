@@ -5,12 +5,13 @@ export const CardContainer = ({ jsonData }) => {
 	const subContent = [];
 	
 	return (
-		<div key="cardcontainer" className={classes.container}>
+		<div className={classes.container}>
 			{jsonData ?
 				Array.isArray(jsonData) ?
 					jsonData.forEach((element) => {
 						subContent.push(
 							<Card
+								key={element.id}
 								id={element.id}
 								title={element.title}
 								cover={element.cover}
