@@ -13,7 +13,7 @@ export const DropDown = ({ title, options }) => {
     return (
       <div className={classes.container}>
         <div className={classes.title}>
-          <button onClick={handleOpen}>{title}<img src={open ? down : up}></img></button>
+          <button onClick={handleOpen}>{title}<img src={open ? down : up} alt=""></img></button>
         </div>
         {open ? (
             <div className={classes.options}>

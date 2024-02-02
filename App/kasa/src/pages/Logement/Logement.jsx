@@ -21,7 +21,7 @@ export const Logement = () => {
 				navigate("/not-found");
 			}
 		}		
-	},[jsonData])
+	},[jsonData, id, navigate])
 
 	return (
 		<main>

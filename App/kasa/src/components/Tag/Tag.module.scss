@@ -1,9 +1,10 @@
 .container{
     display: flex;
 
-    width: 7.1875rem;
+    min-width: 7.1875rem;
     height: 1.5625rem;
     flex-shrink: 0;
+    padding-inline: 0.2rem;
 
     border-radius: 0.625rem;
     background: #FF6060;

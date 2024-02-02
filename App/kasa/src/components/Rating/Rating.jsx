@@ -16,7 +16,7 @@ export const Rating = ({note}) => {
 
 	return(
 		<div className={classes.container}>
-			{ratingBar.map((element, index) => <img key={index} src={element}></img>)}
+			{ratingBar.map((element, index) => <img key={index} src={element} alt=""></img>)}
 		</div>
 	);  
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import classes from "./Carousel.module.scss";
 import left from '../../assets/ARROWLEFT.svg';
