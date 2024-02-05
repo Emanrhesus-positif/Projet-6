@@ -2,7 +2,6 @@ body{
     margin: 0px;
     height: 100%;
 }
-
 #App {
     max-width: 1440px;
     align-items: center;
@@ -32,6 +31,7 @@ main{
 }
 .cardcontainerWrap{
     margin-top: 2.69rem;
+    height: fit-content;
 }
 
 @media screen and (max-width:800px) {
