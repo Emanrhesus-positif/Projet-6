@@ -58,10 +58,6 @@
     gap:4.75rem;
 }
 
-@media screen and (min-width: 1920px){}
-    
-
-
 @media screen and (max-width: 800px){
     .container, .informations{
         flex-direction:column;
@@ -91,12 +87,10 @@
             margin-right: auto; 
             justify-content: flex-start; 
         }
-        
     }
     .addons{
         flex-direction: column;
         margin-top: 0.81rem;
         gap:1.25rem;
     }
-
 }

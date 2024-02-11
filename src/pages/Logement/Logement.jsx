@@ -40,7 +40,6 @@ export const Logement = () => {
 			)}
 			<div className={classes.footerWrap}>
 				<Footer />
-			</div>
-			
+			</div>	
 		</main>);
 }
