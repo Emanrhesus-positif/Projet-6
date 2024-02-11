@@ -36,7 +36,7 @@
 		}
 		img {
 			position: absolute;
-			right: 1.25rem;
+			right: 1.25rem;	
 		}
 	}
 
@@ -63,20 +63,25 @@
 }
 
 @media (prefers-reduced-motion: no-preference){
-	.options {
-		animation: appear 0.5s linear;
-	}
+	.options { animation: appear 3s linear; }
+	.arrowDown{ animation: rotate 0.3s linear; }
+	.arrowUp{ animation: antiRotate 0.3s linear; }
 	
 }    
 
 @keyframes appear{
-	0% {
-	   max-height:0;
-	}
-	100%{
-		max-height:90rem;
-	}
+	0% { max-height:0; }
+	100%{ max-height:90rem; }
 }
+@keyframes rotate{
+	0% { transform: rotate(180deg); }
+	100%{ transform: rotate(0deg); }
+}
+@keyframes antiRotate{
+	0% { transform: rotate(-180deg); }
+	100%{ transform: rotate(0deg); }
+}
+
 
 @media screen and (max-width: 800px){
 	.title{
@@ -91,12 +96,8 @@
 				height: 2rem;
 			}
 		}
-		
 	}
-
 	.options{
-		
-
 		p{
 			font-size: 0.75rem;
 		}

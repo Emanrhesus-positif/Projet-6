@@ -50,6 +50,9 @@
 			height: 100%;
 			object-position: 50% 50%;
 			transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+			.spanHidden{
+				visibility: hidden;
+			}
 			img{
 				max-width:77.5rem;
 				max-height:25.9375rem;
@@ -76,6 +79,7 @@
 				font-weight: 500;
 				line-height: 142.6%; /* 1.60425rem */
 				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.800);
+				
 			}
 		}
 		

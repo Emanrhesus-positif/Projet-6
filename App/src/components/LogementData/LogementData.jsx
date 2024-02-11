@@ -1,6 +1,6 @@
 import classes from './LogementData.module.scss';
 import PropTypes from 'prop-types';
-import { DropDown } from '../DropDown/DropDown.jsx';
+import { Dropdown } from '../Dropdown/Dropdown.jsx';
 import { Profile } from '../Profile/Profile.jsx';
 import { Tag } from '../Tag/Tag.jsx';
 import { Rating } from '../Rating/Rating.jsx';
@@ -27,8 +27,8 @@ export const LogementData = ({ data }) => {
 				</div>
 			</div>
 			<div className={classes.addons}>
-				<DropDown title="Description" options={data.description} />
-				<DropDown title="Équipements" options={data.equipments} />
+				<Dropdown title="Description" options={data.description} />
+				<Dropdown title="Équipements" options={data.equipments} />
 			</div>
 		</div>
 	)

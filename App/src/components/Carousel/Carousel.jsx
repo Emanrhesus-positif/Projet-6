@@ -27,7 +27,7 @@ export const Carousel = ({ data }) => {
 				{data.map((image, index) => (
 						<div key={index} className={`${classes.item} ${index === currentIndex ? classes.currentItem : ''}`}>
 							<img src={image} alt=""></img>
-							<span>{index+1}/{data.length}</span>
+							<span className={maxPictures === 1 ? classes.spanHidden : " "}>{index+1}/{data.length}</span>
 						</div>
 					))}
 			</div>
